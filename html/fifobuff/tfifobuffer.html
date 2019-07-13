@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>TFIFOBuffer</title>
+<link rel="stylesheet" href="../fpdoc.css" type="text/css">
+
+</head>
+<body>
+<table class="bar" width="100%" border="0" cellpadding="4" cellspacing="0">
+<tr>
+<td><b>[<a href="../fifobuff/index.html">Overview</a>][<a href="../fifobuff/index-4.html">Classes</a>][<a href="../fifobuff/index-8.html">Index</a>]</b></td>
+<td align="right"><span class="bartitle">Reference for unit 'FIFOBuff' (<a href="../index.html">#streams</a>)</span></td>
+</tr>
+</table>
+<h1>TFIFOBuffer</h1>
+<p>[<a href="../fifobuff/tfifobuffer-1.html" onClick="window.open('../fifobuff/tfifobuffer-1.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">Properties</a> (<a href="../fifobuff/tfifobuffer-2.html" onClick="window.open('../fifobuff/tfifobuffer-2.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">by Name</a>)] [<a href="../fifobuff/tfifobuffer-3.html" onClick="window.open('../fifobuff/tfifobuffer-3.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">Methods</a> (<a href="../fifobuff/tfifobuffer-4.html" onClick="window.open('../fifobuff/tfifobuffer-4.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">by Name</a>)] [<a href="../fifobuff/tfifobuffer-5.html" onClick="window.open('../fifobuff/tfifobuffer-5.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">Events</a> (<a href="../fifobuff/tfifobuffer-6.html" onClick="window.open('../fifobuff/tfifobuffer-6.html', 'list', 'dependent=yes,resizable=yes,scrollbars=yes,height=400,width=300'); return false;">by Name</a>)] </p>
+<p>generic first-in-first-out buffer class</p>
+<h2>Declaration</h2>
+<p>Source position: fifobuff.pas line 26</p>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td><p><tt><span class="code"><span class="kw">type</span> TFIFOBuffer <span class="sym">=</span> <span class="kw">class</span><span class="sym">(</span>TStream<span class="sym">)</span> <span class="kw">end</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td><p><tt><span class="code"><span class="kw">public</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">constructor </span><a href="../fifobuff/tfifobuffer.create.html">Create</a><span class="sym">;</span><span class="kw"> virtual</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">function </span><a href="../fifobuff/tfifobuffer.copyfrom.html">CopyFrom</a><span class="sym">();</span><span class="kw"> virtual</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">function </span><a href="../fifobuff/tfifobuffer.moveto.html">MoveTo</a><span class="sym">();</span><span class="kw"> virtual</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">function </span><a href="../fifobuff/tfifobuffer.read.html">Read</a><span class="sym">();</span><span class="kw"> override</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">function </span><a href="../fifobuff/tfifobuffer.seek.html">Seek</a><span class="sym">();</span><span class="kw"> override</span><span class="sym">;</span><span class="kw"> overload</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td valign="top"><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">function </span><a href="../fifobuff/tfifobuffer.write.html">Write</a><span class="sym">();</span><span class="kw"> override</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td><p><tt><span class="code"></span></tt></p></td>
+</tr>
+</table>
+<h2>Inheritance</h2>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" valign="top"><p><tt><span class="code"><a href="../fifobuff/tfifobuffer.html">TFIFOBuffer</a></span></tt></p></td>
+<td><p>&nbsp;&nbsp;</p></td>
+<td><p class="cmt">generic first-in-first-out buffer class</p></td>
+</tr>
+<tr>
+<td align="center">|</td>
+</tr>
+<tr>
+<td align="center"><p><tt><span class="code">TStream</span></tt></p></td>
+</tr>
+<tr>
+<td align="center">?</td>
+</tr>
+<tr>
+<td align="center"><p><tt><span class="code">TObject</span></tt></p></td>
+</tr>
+</table>
+<h2>Description</h2>
+<p>This class contains a Read and a Write method which change the behavior of TStream in the way, that Write writes always to the end of the FIFO buffer and Read reads at first from the beginning ind then sequentially from the last read position of the FIFO buffer. The method Seek and the property Position cannot be used because a FIFO buffer has no unique position for reading and writing. The protected methods GetA and GetB have to be overridden in descendents to determine, which media type has to be used as physical storage. This is the only necessary job that a descendent has to do to make a FIFO buffer class work. An example is available as TFIFORAM which uses 2 TMemoryStream instances to complete the FIFO buffer class.</p>
+<hr>
+
+<span class="footer">Documentation generated on: 27-7-16</span>
+</body>
+</html>

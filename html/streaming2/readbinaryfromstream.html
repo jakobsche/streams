@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>ReadBinaryFromStream</title>
+<link rel="stylesheet" href="../fpdoc.css" type="text/css">
+
+</head>
+<body>
+<table class="bar" width="100%" border="0" cellpadding="4" cellspacing="0">
+<tr>
+<td><b>[<a href="../streaming2/index.html">Overview</a>][<a href="../streaming2/index-5.html">Procedures and functions</a>][<a href="../streaming2/index-8.html">Index</a>]</b></td>
+<td align="right"><span class="bartitle">Reference for unit 'Streaming2' (<a href="../index.html">#streams</a>)</span></td>
+</tr>
+</table>
+<h1>ReadBinaryFromStream</h1>
+<p>reads a component from the current position of a stream</p>
+<h2>Declaration</h2>
+<p>Source position: streaming2.pas line 18</p>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td><p><tt><span class="code"><span class="kw">procedure</span> ReadBinaryFromStream<span class="sym">(</span></span></tt></p></td>
+</tr>
+<tr>
+<td><p><tt><span class="code">&nbsp;&nbsp;AStream<span class="sym">: </span>TStream<span class="sym">;</span></span></tt></p></td>
+</tr>
+<tr>
+<td><p><tt><span class="code">&nbsp;&nbsp;<span class="kw">var </span>RootComponent<span class="sym">: </span>TComponent</span></tt></p></td>
+</tr>
+<tr>
+<td><p><tt><span class="code"><span class="sym">)</span><span class="sym">;</span></span></tt></p></td>
+</tr>
+</table>
+<h2>Description</h2>
+<p>If RootComponent is nil then the component' s class, that has to be read from the stream, has to be registered with <a href="../streaming2/registerforstreaming.html">RegisterForStreaming</a> before, else an instance of the created RootComponent is expected at the current position of the stream.</p>
+<hr>
+
+<span class="footer">Documentation generated on: 27-7-16</span>
+</body>
+</html>

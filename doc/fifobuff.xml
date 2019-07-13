@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions><package name="streams"><module name="FIFOBuff"><short>provides a generic dynamic first-in-first-out memory class</short><element name="EFIFOBufferError"><short>Exception class to identify and handle FIFO buffer errors</short><descr>created by TFIFOBuffer instances if there is a problem which cannot be handled. </descr>
+      </element><element name="TFIFOBuffer"><short>generic first-in-first-out buffer class</short><descr>This class contains a Read and a Write method which change the behavior of TStream in the way, that Write writes always to the end of the FIFO buffer and Read reads at first from the beginning ind then sequentially from the last read position of the FIFO buffer. The method Seek and the property Position cannot be used because a FIFO buffer has no unique position for reading and writing. The protected methods GetA and GetB have to be overridden in descendents to determine, which media type has to be used as physical storage. This is the only necessary job that a descendent has to do to make a FIFO buffer class work. An example is available as TFIFORAM which uses 2 TMemoryStream instances to complete the FIFO buffer class.</descr>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

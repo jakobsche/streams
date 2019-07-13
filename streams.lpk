@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <Name Value="streams"/>
+    <Author Value="Andreas Jakobsche, Schopenhauerstraße 35C, 70565 Stuttgart, Germany"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="Extends TStream from the FCL and its usability."/>
+    <License Value="see the file COPYING.modifiedLGPG.txt"/>
+    <Version Major="3"/>
+    <Files Count="4">
+      <Item1>
+        <Filename Value="fifobuff.pas"/>
+        <UnitName Value="FIFOBuff"/>
+      </Item1>
+      <Item2>
+        <Filename Value="fiforam.pas"/>
+        <UnitName Value="FIFORAM"/>
+      </Item2>
+      <Item3>
+        <Filename Value="streambase.pas"/>
+        <UnitName Value="StreamBase"/>
+      </Item3>
+      <Item4>
+        <Filename Value="streaming2.pas"/>
+        <UnitName Value="Streaming2"/>
+      </Item4>
+    </Files>
+    <LazDoc Paths="doc;/usr/lib64/lazarus/docs/xml/ide;/usr/lib64/lazarus/docs/xml/lazutils;/usr/lib64/lazarus/docs/xml/lcl;/home/andreas/fpdocs" PackageName="doc"/>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="i18n"/>
+      <EnableI18NForLFM Value="True"/>
+    </i18n>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

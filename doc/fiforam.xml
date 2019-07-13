@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions><package name="streams"><module name="FIFORAM"><short>provides a first-in-first-out buffer class using a computers RAM as storage</short><descr>extends TFIFOBuffer to a pipe using a computers RAM.</descr>
+    </module>
+  </package>
+</fpdoc-descriptions>

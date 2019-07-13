@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions><package name="streams"><module name="Streaming2"><short>provides simplified streaming of components</short><descr>The procedures of this unit extend the FCL to simplify component streaming. Descendents of TComponent can be written to and read from descendents of TStream by calling easy to handle procedures. The behavior of reading and writing components is compatible to the way being provided by the FCL, but the user is freed from programming a lot of code himself to make it work. Reading and writing include published properties and with a components method DefineProperties defined properties. That means, you can follow the FCL documentation about streaming components to make your own components streamable with this Unit.</descr><element name="ReadBinaryFromStream"><short>reads a component from the current position of a stream</short><descr>If RootComponent is nil then the component' s class, that has to be read from the stream, has to be registered with <link id="RegisterForStreaming">RegisterForStreaming</link> before, else an instance of the created RootComponent is expected at the current position of the stream.</descr>
+      </element><element name="WriteBinaryToStream"><short>writes RootComponent to AStream</short>
+      </element>
+    <element name="RegisterForStreaming"><short>necessary to restore a component from a stream</short><descr>if a component is registered with this procedure, it can be restored from a stream include type information with the procedure <link id="ReadBinaryFromStream">ReadBinaryFromStream</link>.</descr>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

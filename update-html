@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# HTML-Dokumentation erzeugen
+fpdoc --package=streams --descr=@descriptions --input=fifobuff.pas --input=fiforam.pas --input=streaming2.pas --charset=utf-8 --auto-index --content --footer-date --format=html --hide-protected --output=html --warn-no-node
