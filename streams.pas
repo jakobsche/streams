@@ -4,10 +4,11 @@
 
 unit streams;
 
+{$warn 5023 off : no warning about unused units}
 interface
 
 uses
-  FIFOBuff, FIFORAM, StreamBase, Streaming2;
+  FIFOBuff, FIFORAM, StreamBase, Streaming2, BinPropStorage;
 
 implementation
 

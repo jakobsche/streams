@@ -15,10 +15,10 @@
 }
 { |Subversion-Dokumentation
   |------------------------
-  |$Date: 2018-06-12 23:40:14 +0200 (Di, 12. Jun 2018) $ (letzter Aenderungszeitpunkt)
+  |$Date: 2018-06-12 23:40:14 +0200 (Di, 12 Jun 2018) $ (letzter Aenderungszeitpunkt)
   |$Revision: 2823 $ (letzter geaenderte Revision)
   |$Author: andreas $ (letzter Autor)
-  |$HeadURL: svn://192.168.2.3:3691/Lazarus/packages/streams/streaming2.pas $ (Archivadresse)
+  |$HeadURL: svn://martina:3691/Lazarus/packages/streams/streaming2.pas $ (Archivadresse)
   |$Id: streaming2.pas 2823 2018-06-12 21:40:14Z andreas $ (eindeutige Dateikennzeichnung)
 }
 unit Streaming2;
@@ -50,7 +50,7 @@ var
 begin
   Reader := TRegisteredComponentReader.Create(AStream, FilerBufferSize);
   try
-    Reader.IgnoreChildren := False;
+    Reader.IgnoreChildren := True;
     Reader.OnFindComponentClass := @Reader.FindComponentClass;
     if RootComponent = nil then
       RootComponent := Reader.ReadRootComponent(RootComponent)

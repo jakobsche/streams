@@ -15,10 +15,10 @@
 }
 { |Subversion-Dokumentation
   |------------------------
-  |$Date: 2018-01-08 15:28:51 +0100 (Mo, 08. Jan 2018) $ (letzter Aenderungszeitpunkt)
+  |$Date: 2018-01-08 15:28:51 +0100 (Mo, 08 Jan 2018) $ (letzter Aenderungszeitpunkt)
   |$Revision: 2607 $ (letzter geaenderte Revision)
   |$Author: andreas $ (letzter Autor)
-  |$HeadURL: svn://192.168.2.3:3691/Lazarus/packages/streams/streambase.pas $ (Archivadresse)
+  |$HeadURL: svn://martina:3691/Lazarus/packages/streams/streambase.pas $ (Archivadresse)
   |$Id: streambase.pas 2607 2018-01-08 14:28:51Z andreas $ (eindeutige Dateikennzeichnung)
 }
 unit StreamBase;
@@ -40,7 +40,7 @@ type
   TRegisteredComponentReader = class(TReader)
   public
     procedure FindComponentClass(Reader: TReader; const AClassName: string;
-      var ComponentClass: TComponentClass); {Klasse aus dem Klassennamen
+      var ComponentClass: TComponentClass); virtual;{Klasse aus dem Klassennamen
       ermitteln, z.B. aus der mit RegisterForStreaming erstellten Liste,
       eventuell nicht nötig bei binärem Speichern}
   end;

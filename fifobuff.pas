@@ -15,10 +15,10 @@
 }
 { |Subversion-Dokumentation
   |------------------------
-  |$Date: 2018-01-08 15:28:51 +0100 (Mo, 08. Jan 2018) $ (letzter Aenderungszeitpunkt)
+  |$Date: 2018-01-08 15:28:51 +0100 (Mo, 08 Jan 2018) $ (letzter Aenderungszeitpunkt)
   |$Revision: 2607 $ (letzter geaenderte Revision)
   |$Author: andreas $ (letzter Autor)
-  |$HeadURL: svn://192.168.2.3:3691/Lazarus/packages/streams/fifobuff.pas $ (Archivadresse)
+  |$HeadURL: svn://martina:3691/Lazarus/packages/streams/fifobuff.pas $ (Archivadresse)
   |$Id: fifobuff.pas 2607 2018-01-08 14:28:51Z andreas $ (eindeutige Dateikennzeichnung)
 }
 unit FIFOBuff;

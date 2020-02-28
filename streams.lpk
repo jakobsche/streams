@@ -12,7 +12,7 @@
     <Description Value="Extends TStream from the FCL and its usability."/>
     <License Value="see the file COPYING.modifiedLGPG.txt"/>
     <Version Major="3"/>
-    <Files Count="4">
+    <Files Count="5">
       <Item1>
         <Filename Value="fifobuff.pas"/>
         <UnitName Value="FIFOBuff"/>
@@ -29,6 +29,11 @@
         <Filename Value="streaming2.pas"/>
         <UnitName Value="Streaming2"/>
       </Item4>
+      <Item5>
+        <Filename Value="binpropstorage.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="BinPropStorage"/>
+      </Item5>
     </Files>
     <LazDoc Paths="doc;/usr/lib64/lazarus/docs/xml/ide;/usr/lib64/lazarus/docs/xml/lazutils;/usr/lib64/lazarus/docs/xml/lcl;/home/andreas/fpdocs" PackageName="doc"/>
     <i18n>
@@ -36,13 +41,16 @@
       <OutDir Value="i18n"/>
       <EnableI18NForLFM Value="True"/>
     </i18n>
-    <RequiredPkgs Count="2">
+    <RequiredPkgs Count="3">
       <Item1>
-        <PackageName Value="LCL"/>
+        <PackageName Value="rtlpatch"/>
       </Item1>
       <Item2>
-        <PackageName Value="FCL"/>
+        <PackageName Value="LCL"/>
       </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
     </RequiredPkgs>
     <UsageOptions>
       <UnitPath Value="$(PkgOutDir)"/>
